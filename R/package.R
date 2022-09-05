@@ -1,8 +1,8 @@
-#' @title  Draw Samples with the Desired Properties from a Data Set
+#' Draw Samples with the Desired Properties from a Data Set
 #'
 #'
-#' @description \pkg{draw_sample}, function takes a sample of the specified
-#' sample size,#' skewness, and kurtosis form a data set (dist)with or without
+#' @description \pkg{draw_sample}, functions take a sample of the specified
+#' sample size,skewness, and kurtosis form a data set (dist)with or without
 #' resampling.
 #' Fleishman's power method (\doi{10.1007/BF02293811})  was used
 #' for the desired skewness and kurtosis level.

@@ -9,4 +9,8 @@
 #'  \item{Score_1}{Scores of test 1}
 #'  \item{Score_2}{Scores of test 2}
 #' }
+#' @examples
+#' # First 6 rows of the example_data
+#' data(example_data)
+#' head(example_data)
 "example_data"

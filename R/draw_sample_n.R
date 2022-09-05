@@ -1,13 +1,15 @@
 #'
-#' Draw Samples with the Desired Properties from a Data Set
+#' Sample data close to desired characteristics - nearest
 #'
-#' A function to sample data with desired properties.
+#' A Function to sample data close to desired characteristics - nearest
+#' 
 #' @param dist         data frame:consists of id and scores with no missing
 #' @param n            numeric: desired sample size
 #' @param skew         numeric: the skewness value
 #' @param kurts        numeric: the kurtosis value
 #' @param location     numeric: the value for adjusting mean (default is 0).
 #' @param delta_var    numeric: the value for adjusting variance (default is 0).
+#' @param save.output logical: should the output be saved into a text file? (Default is FALSE).
 #' @param output_name character: a vector of two components.
 #'                    The first component is the name of the output file,
 #'                    user can change the second component.
@@ -48,21 +50,26 @@
 #' @examples
 #' # Example data provided with package
 #' data(example_data)
+#' # Draw a sample based on Score_1
+#' output2 <- draw_sample_n(dist=example_data[,c(1,2)],n=200,skew = 0,
+#' kurts = 0, location=0, delta_var=0,save.output=FALSE) # Histogram of the reference data set
+#' # descriptive statistics of the given data,reference data, and drawn sample
+#' output2$desc
+#' # First 6 rows of the drawn sample
+#' head(output2$sample)
+#' # Histogram of the given data set and drawn sample
+#' output2$graph
 #'\dontrun{
-#'# Draw a sample based on Score_1
-#'# draw_sample_n(dist=example_data[,c(1,2)],n=200,skew = 0,kurts = 0, location=0, delta_var=0,
-#'# output_name = c("sample", "4"))
 #'# Draw a sample based on Score_2 (location par)
 #'# draw_sample_n(dist=example_data[,c(1,3)],n=200,skew = 1,kurts = 1,location=-0.5,delta_var=0,
-#'# output_name = c("sample", "5"))
+#'# save.output=TRUE, output_name = c("sample", "2"))
 #'# Draw a sample based on Score_2 (delta_var par)
 #'# draw_sample_n(dist=example_data[,c(1,3)],n=200,skew = 0.5,kurts = 0.4,location=0,delta_var=0.3,
-#'# output_name = c("sample", "6"))
+#'# save.output=TRUE, output_name = c("sample", "3"))
 #'}
-
 draw_sample_n <-  function(dist,n,skew,kurts,
                                  location= 0,
-                                 delta_var = 0,
+                                 delta_var = 0, save.output = FALSE,
                                  output_name = c("sample","default")){
   
 
@@ -158,30 +165,35 @@ draw_sample_n <-  function(dist,n,skew,kurts,
   
   S1 <- data.frame(id=ID_list_2,x=new_sample_2)
   
-  # Save the output
-  if (output_name[2] == "default") {
-    wd <- paste(getwd(), "/", sep = "")
-  }else {wd <- output_name[2]}
-  fileName <- paste( output_name[1], wd,".dat", sep = "")
-  utils::capture.output(data.frame(S1), file = fileName)
-  
-  
   # Organize the output
   dist3 <-  dplyr::select(dist2,id,x)
   dist3 <-  dplyr::mutate(dist3,type="population")
   S2   <-   dplyr::mutate(S1,type="sample")
   result <-  rbind(dist3,S2)
   # histogram(~x|type,data=result,xlab="Score")
-  
   # to capture the graph
   graph <-      lattice::histogram(~x|type,data=result,xlab="Score",
                                    nint = n_break,
                                    scales = list(x = list(tick.number = 5,relation = "free")))
-  
-  lattice::trellis.device(device="png",
-                          filename=paste( output_name[1], wd,".png", sep = ""))
   print(graph)
+  
+  if (save.output==TRUE) {
+    
+  # Save the output
+  if (output_name[2] == "default") {
+    wd <- paste(getwd(), "/", sep = "")
+  }else {wd <- output_name[2]}
+  fileName <- paste( output_name[1], wd,".dat", sep = "")
+  utils::capture.output(data.frame(S1), file = fileName)
+  lattice::trellis.device(device="png",
+                          filename=paste(output_name[1], wd,".png", sep = ""))
   grDevices::dev.off()
+  }
+
+  
+
+
+
   
   desc <-  rbind(psych::describe(x),
                  psych::describe(reference_v4),

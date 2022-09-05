@@ -19,4 +19,9 @@ data(example_data)
 The example data set  is made of 500 subjects ids and
 total scores from two different tests.
 }
+\examples{
+# First 6 rows of the example_data
+data(example_data)
+head(example_data)
+}
 \keyword{datasets}

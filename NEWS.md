@@ -1,7 +1,8 @@
-# drawsample (development version)
+# drawsample 1.0.1
+## Resubmission
 
-# drawsample 0.1.0
+This is a resubmission. In this version I have added new fucntions to drawsamples with individual responses columns. 
 
-* Added a `NEWS.md` file to track changes to the package.
+# drawsample 1.0.0
 
 A quicker version of the fundamental part is integrated to this version. In addition, a feature is introduced to execute package functions  with a user-friendly 'shiny' interface.

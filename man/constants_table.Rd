@@ -7,8 +7,8 @@
 \format{
 A \code{data.frame} with 5 columns, which are
 \describe{
- \item{Skew}{the skewness value}
- \item{Kurtosis}{the standardized kurtosis value}
+ \item{Skew}{The skewness value}
+ \item{Kurtosis}{The standardized kurtosis value}
  \item{b}{Outcome that is based on \code{Skew,Kurtosis}}
  \item{c}{Outcome that is based on \code{Skew,Kurtosis}}
  \item{d}{Outcome that is based on \code{Skew,Kurtosis}}
@@ -21,6 +21,13 @@ constants_table
 This table includes Fleishman's Power Method
 Transformation constants.
 }
+\examples{
+
+# First 6 rows of the table
+data(constants_table)
+head(constants_table)
+
+}
 \references{
 Fleishman AI (1978). A Method for Simulating Non-normal Distributions.
  \emph{Psychometrika, 43, 521-532.} \doi{10.1007/BF02293811}.
@@ -31,8 +38,6 @@ from
 https://cran.r-project.org/web/packages/SimMultiCorrData/index.html
 }
 \seealso{
-
-
 \code{\link[SimMultiCorrData]{find_constants}}
 }
 \keyword{datasets}

@@ -10,8 +10,6 @@ draw_sample_shiny()
 Performing package functions with user friendly 'shiny' interface.
 }
 \examples{
-# Example data provided with package
-data(example_data)
 \dontrun{
 # if(interactive()){
 ## Run this code for launching the 'shiny' application
