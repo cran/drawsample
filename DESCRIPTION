@@ -1,7 +1,7 @@
 Package: drawsample
 Type: Package
 Title: Draw Samples with the Desired Properties from a Data Set
-Version: 1.0.1
+Version: 1.0.2
 Language: en-US
 Authors@R: c(person(given = "Kubra",
                     family = "Atalay Kabasakal",
@@ -35,9 +35,9 @@ Depends: R (>= 2.10)
 BugReports: https://github.com/atalay-k/drawsample/issues
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2022-09-05 19:29:26 UTC; MONSTER
-Author: Kubra Atalay Kabasakal [aut, cre]
-    (<https://orcid.org/0000-0002-3580-5568>),
-  Huseyin Yıldız [ctb] (<https://orcid.org/0000-0003-2387-263X>)
+Packaged: 2026-01-20 14:27:57 UTC; katalay
+Author: Kubra Atalay Kabasakal [aut, cre] (ORCID:
+    <https://orcid.org/0000-0002-3580-5568>),
+  Huseyin Yıldız [ctb] (ORCID: <https://orcid.org/0000-0003-2387-263X>)
 Repository: CRAN
-Date/Publication: 2022-09-05 19:40:02 UTC
+Date/Publication: 2026-01-20 15:50:02 UTC

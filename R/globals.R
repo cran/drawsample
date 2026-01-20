@@ -1,1 +1,2 @@
-utils::globalVariables(c("contants_table", "example_data","likert_example"))
+utils::globalVariables(c("contants_table", "example_data","likert_example","id"))
+

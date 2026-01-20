@@ -1,4 +1,4 @@
-63adcfbdb6f2a595483f85fa4b6dd96f *DESCRIPTION
+1ab55f352d6302c8fcd23b9a2838f7d5 *DESCRIPTION
 348d71aba19253ad69559ba572301990 *LICENSE
 f0008a9294c871f5bd8a40efbe43bf51 *NAMESPACE
 228b17bfe57c786884ab9ab45031556a *NEWS.md
@@ -10,15 +10,15 @@ d8f8429be17bc2e5646783127c951f49 *R/draw_sample_n_ir.R
 f0a5a4763ced12ea3e1254adc77c591c *R/draw_sample_rep.R
 f89e6fbcf49a65421ec03094c42a55ff *R/draw_sample_shiny.R
 7fe0de83d2cbc9584251cdd8d5e8f1ef *R/example_data.R
-5627fef3129ac690982a17e2a8eb27d8 *R/globals.R
+2e12a8daf4974c9c831620d054f2326a *R/globals.R
 3df098d0916e439ee6c5ce77bb1ff3f7 *R/likert_example.R
 072e7cb261d3856f30016f636955e547 *R/package.R
 a5f0835ce2e39dbc44e6680a754d428d *README.md
-afbe4209b3bb961ba3e41cbfe79ea507 *build/partial.rdb
+1dda19015f0aa969acee990c150e3ac9 *build/partial.rdb
 e67b2aaa743ccb2b0e3b44ffd30ddc19 *data/constants_table.rda
 f790be70df8b8e74e2c7c0b50ce8a14f *data/example_data.rda
 f62bd01a8fdc6ecae7d8100cacf1063d *data/likert_example.rda
-8c456563f8bf195c6cafa467676eebc0 *inst/CITATION
+72667480bc139ee3947eacdc84770c8f *inst/CITATION
 f072f1a6cb9e7fdc2fd384ff1fd7ef7c *man/constants_table.Rd
 499d0d21071d04c9198b815e07195482 *man/draw_sample.Rd
 ffe735bb020b42597ec602bc75d70383 *man/draw_sample_ir.Rd
